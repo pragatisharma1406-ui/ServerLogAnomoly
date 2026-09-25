@@ -8,7 +8,7 @@ start=datetime(2026,9,1,9,0,0,tzinfo=timezone.utc)
 ips=[f'192.0.2.{i}' for i in range(10,61)]
 urls=['/','/index.html','/products','/products/1','/products/2','/about','/contact','/login','/search?q=phone','/static/app.js','/static/style.css','/api/items','/api/items/1','/favicon.ico']
 lines=[]
-
+# benign 50k
 for i in range(52000):
     t=start+timedelta(seconds=random.randint(0,7200), milliseconds=random.randint(0,999))
     ip=random.choice(ips)
@@ -19,7 +19,7 @@ for i in range(52000):
     if method=='POST': url=random.choice(['/login','/api/items','/api/search'])
     b=random.randint(120,18000)
     lines.append((t,ip,method,url,status,b))
-
+# attacks: 404 burst, hidden route scan, request flood
 attacks={
  '198.51.100.10':[], '198.51.100.11':[], '198.51.100.12':[]}
 attack_start=start+timedelta(minutes=30)
