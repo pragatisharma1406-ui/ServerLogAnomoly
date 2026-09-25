@@ -1,4 +1,5 @@
 # SERVERLOGANAMOLY — Server Log Anomaly Detection with Isolation Forest
+🚀 **Live Demo:** https://serverloganomoly-yjbgudzphp2tbwy36qssuc.streamlit.app
 
 An end-to-end machine-learning project for detecting suspicious web-server behavior from Apache/Nginx-style access logs. The project converts raw request logs into **IP + 1-minute behavioral windows**, learns normal behavior with **Isolation Forest**, evaluates controlled attack scenarios, and generates a Markdown **Threat Intelligence Report** containing the flagged windows and their exact log lines.
 
